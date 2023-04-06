@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: unset;
+}
+
+.App {
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation ul li {
+  color: #14b1ca;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.navigation ul li:hover, .navigation button:hover {
+  color: darkgreen;
+}
+
+.navigation ul a.active {
+  color: darkgreen;
+}
+
+.navigation button {
+  color: #14b1ca;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.images-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images-wrapper img {
+  width: 500px;
+}
+
+h1 {
+  color: #13acc9;
+  font-weight: 600;
+}
+
+.characters-wrapper, .locations-wrapper, .episodes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3em;
+  color: darkgreen;
+}
+
+.character-card, .location-card, .episode-card {
+  flex: 25% 1;
+  margin-bottom: 50px;
+  font-size: x-large;
+  color: #13acc9;
+}
+
+.character-card span, .location-card span, .episode-card span {
+  color: darkgreen;
+}
+
+.character-card img {
+  border-radius: 20%;
+}
+
+.locations-wrapper, .episodes-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 3em;
+}
+
+.back-button{
+  background: none;
+  border: 1px solid #13acc9;
+  border-radius: 10px;
+  padding: 15px 35px;
+  margin-top: 1em;
+  font-size: x-large;
+  cursor: pointer;
+  color: #13acc9;
+}
+
+.login-page img{
+  width: 500px;
+}
+
+.login-page form{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.login-page input{
+  min-width: 320px;
+  border: 1px solid #13acc9;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: x-large;
+}
+
+.login-page button {
+  background: none;
+  border: 1px solid #13acc9;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: x-large;
+  cursor: pointer;
+  color: #13acc9;
+}

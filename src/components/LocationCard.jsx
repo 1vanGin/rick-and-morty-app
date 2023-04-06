@@ -7,9 +7,12 @@ import { BackButton } from "./BackButton";
 export function LocationCard() {
   const { id } = useParams();
 
-  const { data, loading, error } = useFetch(window.Config.api.location, {
-    id,
-  });
+  const { data, loading, error } = useFetch(
+    window.Config.api.root + window.Config.api.location,
+    {
+      id,
+    }
+  );
 
   if (error) {
     return <Navigate to="/locations" />;

@@ -6,9 +6,12 @@ import { BackButton } from "./BackButton";
 
 export function EpisodeCard() {
   const { id } = useParams();
-  const { data, loading, error } = useFetch(window.Config.api.episode, {
-    id,
-  });
+  const { data, loading, error } = useFetch(
+    window.Config.api.root + window.Config.api.episode,
+    {
+      id,
+    }
+  );
 
   if (error) {
     return <Navigate to="/episodes" />;

@@ -7,9 +7,12 @@ import { BackButton } from "./BackButton";
 export function CharacterCard() {
   const { id } = useParams();
 
-  const { data, loading, error } = useFetch(window.Config.api.character, {
-    id,
-  });
+  const { data, loading, error } = useFetch(
+    window.Config.api.root + window.Config.api.character,
+    {
+      id,
+    }
+  );
 
   if (error) {
     return <Navigate to="/characters" />;

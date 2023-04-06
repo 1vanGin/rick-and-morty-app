@@ -6,7 +6,7 @@ import Loader from "../components/Loader/Loader";
 export function Characters() {
   const [pageNumber, setPageNumber] = useState(1);
   const { data, loading, error, hasMore } = useFetch(
-    window.Config.api.character,
+    window.Config.api.root + window.Config.api.character,
     {
       pageNumber,
     }

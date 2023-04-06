@@ -6,7 +6,7 @@ import Loader from "../components/Loader/Loader";
 export function Episodes() {
   const [pageNumber, setPageNumber] = useState(1);
   const { data, loading, error, hasMore } = useFetch(
-    window.Config.api.episode,
+    window.Config.api.root + window.Config.api.episode,
     {
       pageNumber,
     }

@@ -53,3 +53,11 @@ To find some element on page and fetch next page
 ### LazyLoad/PrivateLazyLoad
 * lazy
 * suspense
+
+# UI
+Used design-system [Mantine](https://mantine.dev/)
+```
+    "@mantine/core"
+    "@mantine/form"
+    "@mantine/hooks"
+```

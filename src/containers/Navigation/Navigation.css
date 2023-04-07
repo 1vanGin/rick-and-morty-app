@@ -1,0 +1,38 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation ul li {
+    color: #14b1ca;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.navigation ul li:hover, .navigation button:hover {
+    color: darkgreen;
+}
+
+.navigation ul a.active {
+    color: darkgreen;
+}
+
+.navigation button {
+    color: #14b1ca;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

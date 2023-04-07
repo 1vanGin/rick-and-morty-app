@@ -1,0 +1,10 @@
+.location-card {
+    flex: 25% 1;
+    margin-bottom: 50px;
+    font-size: x-large;
+    color: #13acc9;
+}
+
+.location-card__label {
+    color: darkgreen;
+}

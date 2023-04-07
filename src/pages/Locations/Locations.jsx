@@ -1,12 +1,13 @@
+import "./Locations.css";
 import React, { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
-import Loader from "../components/Loader/Loader";
+import { useFetch } from "../../hooks/useFetch.js";
+import { Loader } from "../../components/Loader/index.js";
 
-export function Episodes() {
+export function Locations() {
   const [pageNumber, setPageNumber] = useState(1);
   const { data, loading, error, hasMore } = useFetch(
-    window.Config.api.root + window.Config.api.episode,
+    window.Config.api.root + window.Config.api.character,
     {
       pageNumber,
     }
@@ -31,26 +32,25 @@ export function Episodes() {
     },
     [loading, hasMore]
   );
-
   return (
     <>
-      <h1>Эпизоды</h1>
-      <div className="episodes-wrapper">
-        {data.map((episode, index) => {
+      <h1>Локации</h1>
+      <div className="locations-wrapper">
+        {data.map((location, index) => {
           if (data.length - 10 === index + 1) {
             return (
               <Link
                 ref={lastNodeRef}
-                to={`/episodes/${episode.id}`}
-                key={episode.id}
+                to={`/locations/${location.id}`}
+                key={location.id}
               >
-                {episode.name} - {episode.episode}
+                {location.id} - {location.name}
               </Link>
             );
           } else {
             return (
-              <Link to={`/episodes/${episode.id}`} key={episode.id}>
-                {episode.name} - {episode.episode}
+              <Link to={`/locations/${location.id}`} key={location.id}>
+                {location.id} - {location.name}
               </Link>
             );
           }

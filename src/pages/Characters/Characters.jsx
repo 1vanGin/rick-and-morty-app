@@ -1,7 +1,8 @@
+import "./Characters.css";
 import React, { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
-import Loader from "../components/Loader/Loader";
+import { useFetch } from "../../hooks/useFetch.js";
+import Loader from "../../components/Loader/Loader.jsx";
 
 export function Characters() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -42,7 +43,7 @@ export function Characters() {
               <Link
                 ref={lastNodeRef}
                 to={`/characters/${character.id}`}
-                className="character-card"
+                className="character-item"
                 key={character.id}
               >
                 <img src={character.image} alt="name" />
@@ -53,7 +54,7 @@ export function Characters() {
             return (
               <Link
                 to={`/characters/${character.id}`}
-                className="character-card"
+                className="character-item"
                 key={character.id}
               >
                 <img src={character.image} alt="name" />

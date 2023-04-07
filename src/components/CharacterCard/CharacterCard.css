@@ -1,0 +1,14 @@
+.character-card {
+    flex: 25% 1;
+    margin-bottom: 50px;
+    font-size: x-large;
+    color: #13acc9;
+}
+
+.character-card__label {
+    color: darkgreen;
+}
+
+.character-card img {
+    border-radius: 20%;
+}

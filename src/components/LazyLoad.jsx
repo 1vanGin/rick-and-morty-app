@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import Loader from "./Loader/Loader";
-import ErrorBoundary from "../hoc/ErrorBoundary";
+import ErrorBoundary from "./ErrorBoundary.jsx";
 
 const ComponentName = (from, name) => {
   return React.lazy(() =>

@@ -1,0 +1,17 @@
+.characters-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em;
+    color: darkgreen;
+}
+
+.character-item {
+    flex: 25% 1;
+    margin-bottom: 50px;
+    font-size: x-large;
+    color: #13acc9;
+}
+
+.character-item img {
+    border-radius: 20%;
+}

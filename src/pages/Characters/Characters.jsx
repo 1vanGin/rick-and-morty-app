@@ -3,6 +3,7 @@ import React, { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch.js";
 import Loader from "../../components/Loader/Loader.jsx";
+import { useLastNodeRef } from "../../hooks/useLastNodeRef.js";
 
 export function Characters() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -14,24 +15,10 @@ export function Characters() {
   );
 
   const observer = useRef();
-  const lastNodeRef = useCallback(
-    (node) => {
-      if (loading) return;
-      if (observer.current) {
-        observer.current.disconnect();
-      }
-      observer.current = new IntersectionObserver((entries) => {
-        //виден ли элемент на экране
-        if (entries[0].isIntersecting && hasMore) {
-          setPageNumber((prevState) => prevState + 1);
-        }
-      });
-      if (node) {
-        observer.current.observe(node);
-      }
-    },
-    [loading, hasMore]
-  );
+  const lastNodeRef = useLastNodeRef(observer, setPageNumber, {
+    loading,
+    hasMore,
+  });
 
   return (
     <>

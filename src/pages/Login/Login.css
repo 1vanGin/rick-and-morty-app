@@ -12,3 +12,14 @@
 .login-page input{
     border: 1px solid #13acc9;
 }
+
+@media (max-width: 480px) {
+    .login-page img {
+        width: 100%;
+        padding: 0 5%;
+    }
+    .login-page form{
+        flex-direction: column;
+        padding: 0 5%;
+    }
+}

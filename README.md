@@ -9,6 +9,13 @@ This project was made with [Vite](https://vitejs.dev/)
 5. cd name
 6. npm install
 ```
+
+# Updated to PWA (progressive web application)
+* icons
+* manifest
+* Service Worker
+* Service Worker register
+
 # Useful Features
 
 Used in project: 
